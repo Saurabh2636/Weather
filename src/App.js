@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from 'react'
+import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './component/Header'
+import Info from './component/Info'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+     const [temp1, settemp1] = useState({})
+     const [check, setcheck] = useState(false)
+     
+     console.log(temp1,"heelo")
+     console.log(check)
+    
+     return (
+          <>
+               <div>
+               <Header  temp1={temp1} settemp1={settemp1} setcheck={setcheck}/>
+               {check?<Info output={temp1} />:''}
+              
+               </div>
+          </>
+     )
 }
 
-export default App;
+export default App
