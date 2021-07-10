@@ -11,6 +11,7 @@ const Header = (props) =>{
  const hero=()=>{
    
     setstate('')
+    props.setcheck(false)
     axios.get('http://api.weatherstack.com/current',{params})
     .then((res)=>{
       props.settemp1(res.data)
