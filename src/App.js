@@ -6,10 +6,7 @@ import Info from './component/Info'
 const App = () => {
      const [temp1, settemp1] = useState({})
      const [check, setcheck] = useState(false)
-     
-     console.log(temp1,"heelo")
-     console.log(check)
-    
+
      return (
           <>
                <div>
